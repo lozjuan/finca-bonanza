@@ -57,7 +57,7 @@
 						<li>
 							<img v-if="hover === 1" src="../assets/food.svg">
 							<p v-if="hover === 1" id="variety-text">
-								With intense flavor with notes of almonds and caramel, we offer a full bodied coffee with slight notes of green apple acids. 
+								Intense flavor with notes of almonds and caramel, we offer a full bodied coffee with slight notes of green apple acids. 
 							</p>
 							<img v-if="hover === 2" src="../assets/031-computer.svg">
 							<p v-if="hover === 2"  id="variety-text">

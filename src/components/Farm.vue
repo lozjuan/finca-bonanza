@@ -25,7 +25,7 @@
 							</p>
 							<img v-if="hover === 2" src="../assets/pin.svg">
 							<p v-if="hover === 2" id="us-text">
-								The farm is located in Coper Boyacá municipality 60 miles north of Bogota, Colombia.
+								The farm is located in the municipality of Coper Boyaca 60 miles north of Bogota, Colombia.
 							</p>
 							<img v-if="hover > 2" src="../assets/cow.svg">
 							<p v-if="hover > 2" id="us-text">
@@ -43,7 +43,7 @@
 							</p>
 							<img v-if="hover > 2" src="../assets/water-sources.svg">
 							<p v-if="hover > 2" id="us-text">
-								We take special care with our water resources. All the water used in the coffee process is treated and evaporated in retention containers.
+								we take special care of our water resources. All the water used in the coffee process is treated and evaporated in retention containers.
 							</p>
 						</li>
 						<li>

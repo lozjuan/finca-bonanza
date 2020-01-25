@@ -43,7 +43,7 @@
 							</p>
 							<img v-if="hover > 2" src="../assets/water-sources.svg">
 							<p v-if="hover > 2" id="us-text">
-								we take special care of our water resources. All the water used in the coffee process is treated and evaporated in retention containers.
+								We take special care of our water resources. All the water used in the coffee process is treated and evaporated in retention containers.
 							</p>
 						</li>
 						<li>

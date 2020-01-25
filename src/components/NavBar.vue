@@ -15,7 +15,15 @@
 		</nav>
 	</header>
 </template>
-
+<script type="text/javascript">
+export default {
+  data() {
+    return {
+     	publicPath: process.env.BASE_URL
+    };
+  }
+}
+</script>
 <style type="text/css">
 	header {
 	    position: fixed;

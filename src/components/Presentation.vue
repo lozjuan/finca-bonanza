@@ -7,7 +7,7 @@
 <style type="text/css">
 	.presentation { 
 	  padding: 5rem 0;
-      background: url(../assets/landing-image.jpg) no-repeat center fixed;
+      background: url(../assets/landing-image_s.jpg) no-repeat center fixed;
 	  height: 100vh;
 	  background-size: cover;
 	  display: flex;

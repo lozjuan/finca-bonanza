@@ -2,7 +2,7 @@
 	<div>
 		<div id="contact-title">
 			<h2>Contact Us</h2>
-			<p>Please contact us for any request about our products and services. <br> We will provide you all the information as soon as possible</p>
+			<p>Please contact us for any request about our products and services. <br> We will provide you all the information as soon as possible.</p>
 		</div>
 		<div id="contact-email">
 			<div>

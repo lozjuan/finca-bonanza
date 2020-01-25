@@ -42,7 +42,7 @@
 						<li>
 							<img v-if="hover === 1" src="../assets/plant.svg">
 							<p v-if="hover === 1" id="variety-text">
-								We grow the <b>Castillo</b> variety at 1900 meters altitude.
+								We grow the <b>Castillo</b> variety at an altitude of 1900 meters.
 								This variety, very close to Caturra, produces a smooth coffee with pronounced aromatic perfume. 
 							</p>
 							<img v-if="hover === 2" src="../assets/001-smart-farm.svg">
@@ -71,7 +71,7 @@
 						<li>
 							<img v-if="hover === 1" src="../assets/premium.svg">
 							<p v-if="hover === 1" id="variety-text">
-								Our 2019 harvest got a Q-grade of 86. The coffee won the first place at the Boyaca specialty coffees fair.  
+								Our 2019 harvest got a Q-grade of 86. The coffee won the first place at the Boyaca specialty coffee fair.  
 							</p>
 							<img v-if="hover === 2" src="../assets/sun.svg">
 							<p v-if="hover === 2" id="variety-text">
@@ -79,7 +79,7 @@
 							</p>
 							<img v-if="hover > 2" src="../assets/water.svg">
 							<p v-if="hover > 2" id="variety-text">
-								Thanks to our demicilating machine very little water is needed for the bean processing.  2.2 pounds / 0.2 liters.   
+								Thanks to our demucilating machine very little water is needed for the bean processing.  2.2 pounds / 0.2 liters.   
 							</p>
 						</li>
 					</ul>

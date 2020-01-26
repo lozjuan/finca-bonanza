@@ -40,48 +40,29 @@
 				<div id="tabs-content">
 					<ul>
 						<li>
-							<img v-if="hover === 1" src="../assets/plant.svg">
-							<p v-if="hover === 1" id="variety-text">
-								We grow the <b>Castillo</b> variety at an altitude of 1900 meters.
-								This variety, very close to Caturra, produces a smooth coffee with pronounced aromatic perfume. 
-							</p>
-							<img v-if="hover === 2" src="../assets/001-smart-farm.svg">
-							<p v-if="hover === 2" id="variety-text">
-								All the beans are manually harvested and selected. Our main goal is to collect the beans at the point of perfect maturity.  
-							</p>
-							<img v-if="hover > 2" src="../assets/grass.svg">
-							<p v-if="hover > 2" id="variety-text">
-								We practice mechanical and manual weed control. Out of respect for the workers and the environment, we do not use herbicides
-							</p>
+							<img v-if="hover === 1" id="icons" src="../assets/plant.svg">
+							<img v-if="hover === 1" id="text" src="../assets/variety.svg">							
+							<img v-if="hover === 2" id="icons" src="../assets/001-smart-farm.svg">
+							<img v-if="hover === 2" id="text" src="../assets/harvest.svg">
+							<img v-if="hover > 2" id="icons" src="../assets/grass.svg">
+							<img v-if="hover > 2" id="text" src="../assets/weed.svg">
 						</li>
 						<li>
-							<img v-if="hover === 1" src="../assets/food.svg">
-							<p v-if="hover === 1" id="variety-text">
-								Intense flavor with notes of almonds and caramel, we offer a full bodied coffee with slight notes of green apple acids. 
-							</p>
-							<img v-if="hover === 2" src="../assets/031-computer.svg">
-							<p v-if="hover === 2"  id="variety-text">
-								We apply a technified coffee processing and we use Ecomill technology equipment for fermentation and coffee washing. 
-							</p>
-							<img v-if="hover > 2" src="../assets/pesticide.svg">
-							<p v-if="hover > 2"  id="variety-text">
-								No pesticides are sprayed on plants. We keep the crop as clean as possible and protect spiders and others insects regulators. 
-							</p>
+							<img v-if="hover === 1" id="icons" src="../assets/food.svg">
+							<img v-if="hover === 1" id="text" src="../assets/flavor.svg">
+							<img v-if="hover === 2" id="icons" src="../assets/031-computer.svg">
+							<img v-if="hover === 2" id="text" src="../assets/technic.svg">
+							<img v-if="hover > 2" id="icons" src="../assets/pesticide.svg">
+							<img v-if="hover > 2"  id="text" src="../assets/pesticides.svg">
 						</li>
 						<li>
-							<img v-if="hover === 1" src="../assets/premium.svg">
-							<p v-if="hover === 1" id="variety-text">
-								Our 2019 harvest got a Q-grade of 86. The coffee won the first place at the Boyaca specialty coffee fair.  
-							</p>
-							<img v-if="hover === 2" src="../assets/sun.svg">
-							<p v-if="hover === 2" id="variety-text">
-								The beans are 100% sun-dried. The temperature in the greenhouses used for drying stays around 86 °F.  
-							</p>
-							<img v-if="hover > 2" src="../assets/water.svg">
-							<p v-if="hover > 2" id="variety-text">
-								Thanks to our demucilating machine very little water is needed for the bean processing.  2.2 pounds / 0.2 liters.   
-							</p>
-						</li>
+							<img v-if="hover === 1" id="icons" src="../assets/premium.svg">
+							<img v-if="hover === 1" id="text" src="../assets/prix.svg">
+							<img v-if="hover === 2" id="icons" src="../assets/sun.svg">
+							<img v-if="hover === 2" id="text" src="../assets/dry.svg">
+							<img v-if="hover > 2" id="icons" src="../assets/water.svg">
+							<img v-if="hover > 2" id="text" src="../assets/demucilating.svg">
+  						</li>
 					</ul>
 				</div>
 			</div>	
@@ -101,16 +82,18 @@ export default {
 </script>
 
 <style type="text/css">
-p {
-	padding-left: 1rem;
-	text-align: center;
+
+#text {
+	width: 90%;
+	padding: 1rem;
 }
+
 #tabs-content ul li {
 	display: flex;
 	align-items: center;
 }
 
-#tabs-content ul li img { 
+#icons { 
 	width: 30px;
 }
 

@@ -120,6 +120,9 @@ export default {
 		margin-top: -1rem;
     	width: 255%;
 	}
+	#farm-title img {
+	    margin-top: 1rem;
+	}
 	#farm-photos {
 		width: 230rem;
 		padding-right: 5rem;

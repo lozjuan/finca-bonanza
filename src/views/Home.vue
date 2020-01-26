@@ -1,8 +1,4 @@
 <template>
-  <head>
-    <link rel="icon" href="../assets/logo.png">
-  </head>
-  
   <div class="home">
     <NavBar />
     <Presentation />

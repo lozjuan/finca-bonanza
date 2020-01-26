@@ -7,7 +7,7 @@
 		<div id="contact-email">
 			<div>
 				<img src="../assets/mail.svg">
-				<p><b>cafefincabonanza@gmail.com</b></p>
+				<p><b><a href="mailto:cafefincabonanza@gmail.com">cafefincabonanza@gmail.com</a></b></p>
 			</div>
 			<div>
 				<img src="../assets/whatsapp.svg">
@@ -36,6 +36,10 @@
 	</div>
 </template>
 <style type="text/css">
+	a {
+		text-decoration: none;
+		color: black;
+	}
 	span {
 		font-size: 10px;	
 		margin: 1px;

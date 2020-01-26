@@ -74,7 +74,7 @@ export default {
 	#logo-link {
 		margin-left: 3rem;
 		width: 20rem;
-		height: 5rem;
+		height: 4rem;
 		display: flex;
 	}
 </style>

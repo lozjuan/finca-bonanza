@@ -1,5 +1,5 @@
 <template>
-	<header class="navbar">
+	<header class="navbar" v-responsive="{ small: el => el.width <= 500 }">
 		<div class="logo">
 			<a id="logo-link" href="#" v-scroll-to="'.navbar'">
 				<img id="logo" src="../assets/logo.svg"> 
@@ -16,14 +16,13 @@
 	</header>
 </template>
 <script type="text/javascript">
+import { ResponsiveDirective } from "vue-responsive-components"
 export default {
-  data() {
-    return {
-     	publicPath: process.env.BASE_URL
-    };
+  props: ["post"],
+  directives: {
+    responsive: ResponsiveDirective
   }
-}
-</script>
+}</script>
 <style type="text/css">
 	header {
 	    position: fixed;

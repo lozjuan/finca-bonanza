@@ -3,13 +3,21 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import VueAgile from "vue-agile";
-import VueScrollTo from 'vue-scrollto';
+import VueScrollTo from 'vue-scrollto'; 
+import VueMq from 'vue-mq'
 
 Vue.use(VueAgile);
 Vue.config.productionTip = false;
+
+Vue.use(VueMq, {
+  breakpoints: {
+    sm: 450,
+    md: 1450,
+    lg: Infinity,
+  }
+});
  
 Vue.use(VueScrollTo);
- 
 // You can also pass in the default options
 Vue.use(VueScrollTo, {
      container: "body",
@@ -25,6 +33,7 @@ Vue.use(VueScrollTo, {
      y: true
  });
 
+  
 new Vue({
   router,
   store,

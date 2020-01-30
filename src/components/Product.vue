@@ -2,7 +2,7 @@
 	<div>
 		<div class="product-title"><img class="product-title" src="../assets/product-title.svg"></div>
 		<div class="product-content">
-			<div class="product-photos">
+			<div v-bind:class="{'product-photos': $mq === 'md', 'product-photos-lg': $mq ==='lg'}">
 				<agile :nav-buttons="false" :autoplay-speed="5000" :speed="2500" fade pause-on-hover pause-on-dots-hover autoplay>
 					<div class="slide ">
 						<img src="../assets/coffee_2.jpg">
@@ -168,6 +168,17 @@ p {
 	padding-bottom: 5rem;
 
 }
+
+.product-photos-lg {
+	margin-left: 3rem;
+	margin-top: -1rem;
+	width: 230rem;
+	padding-right: 5rem;
+	padding-left: 5rem;
+	padding-bottom: 5rem;
+}
+
+
 
 .slide img {
 	width: 100%;

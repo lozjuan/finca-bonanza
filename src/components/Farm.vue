@@ -120,6 +120,11 @@ export default {
 		margin-top: -1rem;
     	width: 255%;
 	}
+	.farm-description-lg {
+		width: 255%;
+		margin-left: 7rem;
+	}
+	
 	.farm-photos {
 		width: 230rem;
 		padding-right: 5rem;
@@ -128,7 +133,7 @@ export default {
 	}
 
 	.farm-photos-lg {
-		width: 70rem;
+		width: 175rem;
 		padding-right: 5rem;
 		padding-left: 5rem;
 		padding-bottom: 5rem;
@@ -143,7 +148,7 @@ export default {
 		padding: 15px;
 	}
 	.farm-tabs-lg img {
-		width: 12%;
+		width: 7%;
 		padding: 15px;
 	}
 

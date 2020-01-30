@@ -225,6 +225,10 @@ p {
 	list-style: none;
 }
 
+.product-tabs {
+	width: 30rem;
+}
+
 .product-tabs-lg img {
 	width: 12%;
 	padding: 15px;
@@ -233,6 +237,6 @@ p {
 .product-tabs  img {
 	width: 8%;
 	padding: 15px;
-	
+
 }
 </style>

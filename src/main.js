@@ -11,7 +11,7 @@ Vue.config.productionTip = false;
 
 Vue.use(VueMq, {
   breakpoints: {
-    sm: 450,
+    iphone: 667,
     md: 1450,
     lg: Infinity,
   }

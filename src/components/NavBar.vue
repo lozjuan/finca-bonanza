@@ -1,18 +1,42 @@
 <template>
-	<header class="navbar" v-responsive="{ small: el => el.width <= 500 }">
-		<div class="logo">
-			<a id="logo-link" href="#" v-scroll-to="'.navbar'">
-				<img id="logo" src="../assets/logo.svg"> 
-				<img id="brand-title" src="../assets/brand-title.svg">
-			</a>	
+	<header> 
+		<div v-if="$mq === 'md' || $mq === 'lg'" class="navbar">
+			<div class="logo">
+				<a id="logo-link" href="#" v-scroll-to="'.navbar'">
+					<img id="logo" src="../assets/logo.svg"> 
+					<img id="brand-title" src="../assets/brand-title.svg">
+				</a>	
+			</div>
+			<nav class="topics">
+				<ul >
+					<li><a href="#" v-scroll-to="'.product-title'"><img src="../assets/our-coffee.svg"></a></li>
+					<li><a href="#" v-scroll-to="'.farm-title'"><img id="bfp" src="../assets/bfp.svg"></a></li>
+					<li><a href="#" v-scroll-to="'#contact-title'"><img id="contact" src="../assets/contact.svg"></a></li>
+				</ul>
+			</nav>
 		</div>
-		<nav class="topics">
-			<ul >
-				<li><a href="#" v-scroll-to="'#product-title'"><img src="../assets/our-coffee.svg"></a></li>
-				<li><a href="#" v-scroll-to="'#farm-title'"><img id="bfp" src="../assets/bfp.svg"></a></li>
-				<li><a href="#" v-scroll-to="'#contact-title'"><img id="contact" src="../assets/contact.svg"></a></li>
-			</ul>
-		</nav>
+		<div v-if="$mq === 'iphone'" class="navbar-mobile">
+			<div class="logo">
+		  		<a id="logo-link" href="#" v-scroll-to="'.navbar'">
+					<img id="logo" src="../assets/logo.svg"> 
+					<img id="brand-title" src="../assets/brand-title.svg">
+				</a>
+			  	<div class="navbar-brand">
+        			<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" @click="isOpen =!isOpen" v-bind:class="{'is-active': isOpen}">
+            			<span aria-hidden="true"></span>
+            			<span aria-hidden="true"></span>
+            			<span aria-hidden="true"></span>
+        			</a>
+        		</div>
+	        	<div class="navbar-menu" v-bind:class="{'is-active': isOpen}">
+	            	<div class="navbar-end">
+	                	<router-link to="product-title" class="navbar-item is-tab">Our Coffee</router-link>
+	                	<router-link to="farm-title" class="navbar-item is-tab">Bonanza Farm Project</router-link>
+	                	<router-link to="contact-title" class="navbar-item is-tab">Contact Us</router-link>
+	            	</div>
+	        	</div>
+			</div>	
+		</div>
 	</header>
 </template>
 <script type="text/javascript">
@@ -21,10 +45,17 @@ export default {
   props: ["post"],
   directives: {
     responsive: ResponsiveDirective
-  }
-}</script>
+  }, 
+  data: function() {
+        return {
+            isOpen: false
+        }
+    }
+}
+
+</script>
 <style type="text/css">
-	header {
+	.navbar {
 	    position: fixed;
 	    top: 0;
 	    width: 100%;
@@ -32,7 +63,8 @@ export default {
 	    background-color: white;
 		display: flex;
 		align-items: center;
-		justify-content: space-between;		
+		justify-content: space-between;
+		z-index: 1;		
 	}
 
 	.topics ul {

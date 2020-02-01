@@ -1,8 +1,8 @@
 <template>
 	<div>
 		<div class="product-title"><img class="product-title" src="../assets/product-title.svg"></div>
-		<div class="product-content">
-			<div v-bind:class="{'product-photos': $mq === 'md', 'product-photos-lg': $mq ==='lg'}">
+		<div v-bind:class="{'product-content': $mq === 'md', 'product-content-lg': $mq ==='lg', 'product-content-mobile': $mq === 'iphone'}">
+			<div v-bind:class="{'product-photos': $mq === 'md', 'product-photos-lg': $mq ==='lg', 'product-photos-mobile': $mq === 'iphone'}">
 				<agile :nav-buttons="false" :autoplay-speed="5000" :speed="2500" fade pause-on-hover pause-on-dots-hover autoplay>
 					<div class="slide ">
 						<img src="../assets/coffee_2.jpg">
@@ -24,9 +24,9 @@
 					</div>
 				</agile>
 			</div>
-			<div v-bind:class="{'product-description': $mq === 'md', 'product-description-lg': $mq === 'lg'}" >
+			<div v-bind:class="{'product-description': $mq === 'md', 'product-description-lg': $mq === 'lg', 'product-description-mobile': $mq === 'iphone'}">
 				<div v-bind:class="{'tabs': $mq === 'md', 'tabs-lg': $mq === 'lg'}">
-					<div v-bind:class="{'product-tabs': $mq === 'md', 'product-tabs-lg': $mq === 'lg'}">
+					<div v-bind:class="{'product-tabs': $mq === 'md', 'product-tabs-lg': $mq === 'lg', 'product-tabs-mobile': $mq === 'iphone'}">
 						<img @mouseover="hover = 1"							
 						src="../assets/coffee-bean.svg">
 						<img @mouseover="hover = 2"
@@ -37,7 +37,7 @@
 						src="../assets/green-earth.svg">
 					</div>
 				</div>
-				<div v-bind:class="{'tabs-content': $mq === 'md', 'tabs-content-lg': $mq === 'lg'}">
+				<div v-bind:class="{'tabs-content': $mq === 'md', 'tabs-content-lg': $mq === 'lg', 'tabs-content-mobile': $mq === 'iphone'}">
 					<ul>
 						<li>
 							<img v-if="hover === 1" src="../assets/plant.svg">
@@ -110,19 +110,15 @@ p {
 	display: flex;
 	align-items: center;
 }
-
 .tabs-content ul li img { 
 	width: 30px;
 }
-
 .tabs-content-lg ul li img { 
 	width: 40px;
 }
-
 .tabs-content-lg {
 	margin-top: -35px;
 }
-
 .tabs-content-lg ul li p { 
 	padding-top: 1rem;
 	padding-bottom: 1rem; 
@@ -130,25 +126,30 @@ p {
 	padding-right: 4rem;
 	font-size: 18px;
 }
-
+.tabs-content-mobile ul li img {
+	width: 1.5rem;
+}
+.tabs-content-mobile ul li {
+	display: flex;
+	margin-left: 2rem;
+    margin-right: 2rem;
+}
 .tabs-content ul li p {
 	padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-left: 1rem;
     padding-right: 2rem;
 }
-
 .product-title {
 	width: 20rem;
 	margin: 1rem auto;
 }
-.product-content {
+.product-content, .product-content-lg {
 	margin-top: 2rem;
 	display: flex;
 	justify-content: space-around;
 	height: 30rem;	
 }
-
 .product-description-lg {
 	width: 255%;
 	margin-left: -10rem;
@@ -168,7 +169,6 @@ p {
 	padding-bottom: 5rem;
 
 }
-
 .product-photos-lg {
 	margin-left: 3rem;
 	margin-top: -1rem;
@@ -177,25 +177,27 @@ p {
 	padding-left: 5rem;
 	padding-bottom: 5rem;
 }
-
-
-
+.product-photos-mobile {
+	display: flex;
+    justify-content: center;
+}
+.product-content-mobile {
+	display: flex;
+	flex-direction: column-reverse;
+}
 .slide img {
 	width: 100%;
 }
-
 .slide {
 	display: block;
 	object-fit: cover;
 	width: 100%;
 }
-
 .agile {
 	width: 35rem;
 	flex-direction: column;
 	position: absolute;
 }
-
 .agile button {
 	background-color: transparent;
 	border: 1px solid black;
@@ -209,34 +211,30 @@ p {
 	transition-duration: .3s;
 	width: 10px;
 }
-
 .tabs-lg {
 	display: flex;
 	justify-content: center;
-
 }
-
 .tabs {
 	height: 3rem;
 	display: flex;
 }
-
 .tabs-content ul {
 	list-style: none;
 }
-
 .product-tabs {
 	width: 30rem;
 }
-
 .product-tabs-lg img {
 	width: 12%;
 	padding: 15px;
 }
-
+.product-tabs-mobile img {
+	width: 2rem;
+	padding: 0.5rem;
+}
 .product-tabs  img {
 	width: 8%;
 	padding: 15px;
-
 }
 </style>

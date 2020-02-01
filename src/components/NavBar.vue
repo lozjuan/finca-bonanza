@@ -21,18 +21,14 @@
 					<img id="logo" src="../assets/logo.svg"> 
 					<img id="brand-title" src="../assets/brand-title.svg">
 				</a>
-			  	<div class="navbar-brand">
-        			<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" @click="isOpen =!isOpen" v-bind:class="{'is-active': isOpen}">
-            			<span aria-hidden="true"></span>
-            			<span aria-hidden="true"></span>
-            			<span aria-hidden="true"></span>
-        			</a>
-        		</div>
-	        	<div class="navbar-menu" v-bind:class="{'is-active': isOpen}">
-	            	<div class="navbar-end">
-	                	<router-link to="product-title" class="navbar-item is-tab">Our Coffee</router-link>
-	                	<router-link to="farm-title" class="navbar-item is-tab">Bonanza Farm Project</router-link>
-	                	<router-link to="contact-title" class="navbar-item is-tab">Contact Us</router-link>
+	        	<div class="navbar-menu">
+	        		<a href="javascript:void(0);" class="icon" v-on:click="openMenu()">
+    					<i class="fa fa-bars"></i>
+  					</a>
+	            	<div id="menu-list">
+	                	<a href="#" v-scroll-to="'.product-title'" class="navbar-item is-tab">Our Coffee</a>
+	                	<a href="#" v-scroll-to="'.farm-title'" class="navbar-item is-tab">Bonanza Farm Project</a>
+	                	<a href="#" v-scroll-to="'#contact-title'" class="navbar-item is-tab">Contact Us</a>
 	            	</div>
 	        	</div>
 			</div>	
@@ -40,21 +36,57 @@
 	</header>
 </template>
 <script type="text/javascript">
-import { ResponsiveDirective } from "vue-responsive-components"
 export default {
-  props: ["post"],
-  directives: {
-    responsive: ResponsiveDirective
-  }, 
-  data: function() {
-        return {
-            isOpen: false
-        }
-    }
+	methods: {
+		openMenu() {
+			var x = document.getElementById("menu-list");
+			if (x.style.display === "flex") {
+				x.style.display = "none";
+			} else {
+				x.style.display = "flex";
+			}
+		}
+	}
 }
-
 </script>
 <style type="text/css">
+	.navbar-menu #menu-list {
+	  	display: none;
+	}
+	.navbar-mobile {
+		position: fixed;
+	}
+	#menu-list {
+		display: flex;
+    	flex-direction: column;
+    	width: 100%;
+	    align-items: self-start;
+	}
+	#menu-list a {
+		font-family: Optima;
+		color: #52482D;
+		font-weight: bold;
+	}
+	.navbar-menu a.icon {
+	  display: flex;
+	  position: relative;
+      float: right;
+      font-size: 2.5rem;
+	}
+	.navbar-menu a {
+	  padding: 14px 16px;
+	  text-decoration: none;
+	  font-size: 17px;
+	}
+	.navbar-menu {
+		position: fixed;
+	    top: 0;
+	    height: 4rem;
+	    width: 100%;
+	    opacity: 0.5;
+	    background-color: white;
+	    z-index: 1;	
+	}
 	.navbar {
 	    position: fixed;
 	    top: 0;
@@ -66,30 +98,24 @@ export default {
 		justify-content: space-between;
 		z-index: 1;		
 	}
-
 	.topics ul {
 		display: flex;
   		list-style: none;
   		margin-right: 2rem;
 	}
-
 	.topics ul li a img {
 		width: 60%;
 	} 
-
 	.topics ul li {
 		width: 10rem;
 	} 
-
 	#bfp {
 	    width: 115%;
     	margin-bottom: -0.2rem;
 	}
-
 	#contact {
 		margin-left: 2rem;
 	}
-
 	#logo {
 		width: 15%;
 	    margin-top: 0.5rem;

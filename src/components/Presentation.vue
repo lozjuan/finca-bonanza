@@ -1,11 +1,11 @@
 <template>
-	<div class="presentation">
-		<img id="brand" src="../assets/brand.svg">
+	<div v-bind:class="{'presentation-lg': $mq === 'lg', 'presentation-md': $mq === 'md', 'presentation-mobile': $mq === 'iphone'}">
+		<img src="../assets/brand.svg">
 	</div>
 </template>	
 
 <style type="text/css">
-	.presentation { 
+	.presentation-md, .presentation-lg, .presentation-mobile { 
 	  padding: 5rem 0;
       background: url(../assets/landing-image_s.jpg) no-repeat center fixed;
 	  height: 100vh;
@@ -15,7 +15,10 @@
 	  background-attachment: fixed !important;
 	  align-items: center;
 	}
-	#brand {
+	.presentation-md img, .presentation-lg img {
 	  width: 40%;
+	}
+	.presentation-mobile img{
+	  width: 60%;
 	}
 </style>

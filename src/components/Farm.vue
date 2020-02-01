@@ -1,10 +1,10 @@
 <template>
 	<div>
 		<div class="farm-title"><img src="../assets/project-title.svg"></div>
-		<div class="farm-content">
-			<div v-bind:class="{'farm-description': $mq === 'md', 'farm-description-lg': $mq === 'lg'}">
+		<div  v-bind:class="{'farm-content': $mq === 'md', 'farm-content-lg': $mq ==='lg', 'farm-content-mobile': $mq === 'iphone'}">
+			<div v-bind:class="{'farm-description': $mq === 'md', 'farm-description-lg': $mq === 'lg', 'farm-description-mobile': $mq === 'iphone'}">
 				<div  v-bind:class="{'tabs': $mq === 'md', 'tabs-lg': $mq === 'lg'}">
-					<div v-bind:class="{'farm-tabs': $mq === 'md', 'farm-tabs-lg': $mq === 'lg'}">
+					<div v-bind:class="{'farm-tabs': $mq === 'md', 'farm-tabs-lg': $mq === 'lg', 'farm-tabs-mobile': $mq === 'iphone'}">
 						<img @mouseover="hover = 1"							
 						src="../assets/043-farmer.svg">
 						<img @mouseover="hover = 2"
@@ -15,7 +15,7 @@
 						src="../assets/hands-and-gestures.svg">
 					</div>
 				</div>
-				<div v-bind:class="{'tabs-content': $mq === 'md', 'tabs-content-lg': $mq === 'lg'}">
+				<div v-bind:class="{'tabs-content': $mq === 'md', 'tabs-content-lg': $mq === 'lg', 'tabs-content-mobile': $mq === 'iphone'}">
 					<ul>
 						<li>
 							<img v-if="hover === 1" src="../assets/about-us.svg">
@@ -65,7 +65,7 @@
 					</ul>
 				</div>
 			</div>
-			<div v-bind:class="{'farm-photos': $mq === 'md', 'farm-photos-lg': $mq === 'lg'}">
+			<div v-bind:class="{'farm-photos': $mq === 'md', 'farm-photos-lg': $mq === 'lg', 'farm-photos-mobile': $mq === 'iphone'}">
 				<agile :nav-buttons="false" :autoplay-speed="5000" :speed="2500" fade pause-on-hover pause-on-dots-hover autoplay>
 					<div class="slide ">
 						<img src="../assets/farm_1.jpg">
@@ -103,12 +103,15 @@ export default {
 	div ul {
 		padding: 0px;
 	}
-
+	.farm-content-mobile {
+	display: flex;
+	flex-direction: column;
+	}
 	.farm-title {
 		width: 20rem;
 		margin: 1rem auto;
 	}
-	.farm-content {
+	.farm-content, .farm-content-lg {
 		margin-top: 2rem;
 		display: flex;
 		justify-content: space-around;
@@ -131,14 +134,20 @@ export default {
 		padding-left: 5rem;
 		padding-bottom: 5rem;
 	}
-
+	.farm-tabs-mobile img {
+		width: 2rem;
+		padding: 0.5rem;
+	}
 	.farm-photos-lg {
 		width: 175rem;
 		padding-right: 5rem;
 		padding-left: 5rem;
 		padding-bottom: 5rem;
 	}
-
+	.farm-photos-mobile {
+		display: flex;
+    	justify-content: center;
+	}
 	.farm-photos img {
 	    height: 100%;
 	}

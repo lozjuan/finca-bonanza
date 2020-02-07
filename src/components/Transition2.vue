@@ -11,7 +11,7 @@
 	  	background-attachment: fixed !important;
 	}
 	.tran2-lg, .tran2-md, .tran2-mobile {
-		background: url(../assets/transition-image.jpg) no-repeat center fixed;
+		background: url(../assets/transition2-image.jpg) no-repeat center fixed;
 	  	height: 50vh;
 	  	background-size: cover;
 	  	background-attachment: fixed !important;

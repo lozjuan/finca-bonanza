@@ -10,8 +10,4 @@
 	  	background-size: cover;
 	  	background-attachment: fixed !important;
 	}
-
-	.tran-mobile {
-		margin-top: 30rem;
-	}
 </style>

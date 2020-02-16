@@ -16,8 +16,4 @@
 	  	background-size: cover;
 	  	background-attachment: fixed !important;
 	}
-
-	.tran2-mobile {
-		margin-top: 30rem;
-	}
 </style>

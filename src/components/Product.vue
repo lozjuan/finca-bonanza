@@ -126,6 +126,11 @@ p {
 	padding-right: 4rem;
 	font-size: 18px;
 }
+
+.tabs-content-mobile {
+	width: 85%;
+	margin-left: 2rem; 
+}
 .tabs-content-mobile ul li img {
 	width: 1.5rem;
 }
@@ -196,7 +201,6 @@ p {
 .agile {
 	width: 35rem;
 	flex-direction: column;
-	position: absolute;
 }
 .agile button {
 	background-color: transparent;

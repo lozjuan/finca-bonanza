@@ -18,7 +18,7 @@
 
 	.presentation-mobile {
 	  padding: 5rem 0;
-      background: url(../assets/landing-image_mobile.jpg) no-repeat bottom fixed;
+      background: url(../assets/landing-image_mobile_2.jpg) no-repeat center fixed;
 	  height: 100vh;
 	  background-size: cover;
 	  display: flex;

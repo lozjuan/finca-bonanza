@@ -145,9 +145,15 @@ export default {
 		padding-bottom: 5rem;
 	}
 	.farm-photos-mobile {
+		max-width: 100%;
 		display: flex;
     	justify-content: center;
 	}
+
+	.farm-photos-mobile .agile {
+		width: 20rem;
+	}
+
 	.farm-photos img {
 	    height: 100%;
 	}

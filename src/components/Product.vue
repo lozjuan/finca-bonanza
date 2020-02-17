@@ -185,6 +185,7 @@ p {
 .product-photos-mobile {
 	display: flex;
     justify-content: center;
+    max-width: 100%
 }
 .product-content-mobile {
 	display: flex;
@@ -198,6 +199,10 @@ p {
 	object-fit: cover;
 	width: 100%;
 }
+
+.product-photos-mobile .agile {
+	width: 20rem;
+} 
 .agile {
 	width: 35rem;
 	flex-direction: column;

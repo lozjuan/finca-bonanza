@@ -123,6 +123,11 @@ export default {
 		margin-top: -1rem;
     	width: 255%;
 	}
+	
+	.farm-description-mobile {
+		max-width: 100%;
+	}
+
 	.farm-description-lg {
 		width: 255%;
 		margin-left: 7rem;

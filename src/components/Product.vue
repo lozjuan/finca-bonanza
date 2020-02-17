@@ -166,6 +166,11 @@ p {
 	padding-right: 5rem;
 	padding-left: 5rem;
 }
+
+.product-description-mobile {
+	max-width: 100%;
+}
+
 .product-photos {
 	margin-top: -1rem;
 	width: 230rem;

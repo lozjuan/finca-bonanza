@@ -20,10 +20,8 @@
 	  padding: 5rem 0;
       background: url(../assets/landing-image_mobile.jpg) no-repeat center fixed;
 	  height: 100vh;
-	  background-size: cover;
 	  display: flex;
 	  flex-direction: column;
-	  background-attachment: fixed !important;
 	  align-items: center;
 	}
 

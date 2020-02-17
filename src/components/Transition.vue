@@ -9,5 +9,6 @@
 	  	height: 50vh;
 	  	background-size: cover;
 	  	background-attachment: fixed !important;
+	  	max-width: 100%;
 	}
 </style>

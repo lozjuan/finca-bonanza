@@ -33,5 +33,6 @@
 	}
 	.presentation-mobile img{
 	  width: 60%;
+	  margin-top: 2rem;
 	}
 </style>

@@ -72,11 +72,12 @@ export default {
 	  position: relative;
       float: right;
       font-size: 2.5rem;
+      z-index: 1;
 	}
 	.navbar-menu a {
-	  padding: 14px 16px;
-	  text-decoration: none;
-	  font-size: 17px;
+	  padding: 10px 19px;
+      text-decoration: none;
+      font-size: 13px;
 	}
 	.navbar-menu {
 		position: fixed;

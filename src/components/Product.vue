@@ -128,9 +128,9 @@ p {
 }
 
 .tabs-content-mobile {
-	width: 85%;
-	margin-left: 2rem; 
+	max-width: 100%;
 }
+
 .tabs-content-mobile ul li img {
 	width: 1.5rem;
 }
@@ -213,17 +213,7 @@ p {
 	flex-direction: column;
 }
 .agile button {
-	background-color: transparent;
-	border: 1px solid black;
-	cursor: pointer;
-	display: block;
-	height: 10px;
-	font-size: 0;
-	line-height: 0;
-	margin: 0;
-	padding: 0;
-	transition-duration: .3s;
-	width: 10px;
+	display: none;
 }
 .tabs-lg {
 	display: flex;

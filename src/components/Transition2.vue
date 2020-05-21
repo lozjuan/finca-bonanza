@@ -14,7 +14,6 @@
 	.tran2-mobile {
 		background: url(../assets/transition2-image-mobile.jpg) no-repeat center fixed;
 	  	height: 40vh;
-	  	background-size: cover;
 	  	background-attachment: fixed !important;
 	  	max-width: 100%;
 	}

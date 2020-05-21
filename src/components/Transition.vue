@@ -14,6 +14,7 @@
 	.tran-mobile {
 		background: url(../assets/transition-image-mobile.jpg) no-repeat;
 	  	height: 40vh;
+	  	-webkit-background-size: auto;
 	  	background-attachment: fixed !important;
 	  	max-width: 100%;
 	}	

@@ -20,11 +20,11 @@
 	  padding: 5rem 0;
       background: url(../assets/landing-image_mobile.jpg) no-repeat;
 	  height: 100vh;
-	  background-size: cover;
+	  -webkit-background-size: cover;
 	  background-position: center bottom;
 	  display: flex;
 	  flex-direction: column;
-	  background-attachment: fixed !important;
+	  background-attachment: initial;
 	  align-items: center;
 	}
 
